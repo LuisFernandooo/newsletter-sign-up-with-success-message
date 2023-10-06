@@ -1,0 +1,263 @@
+:root{
+    --color-tomato: rgb(255, 98, 87);
+    --color-dark-slate-grey: #36384d;
+    --color-grey: hsl(231, 7%, 60%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-dark-slate-grey);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-subscribe{
+    width: 950px;
+    padding: 25px;
+    background-color: var(--color-white);
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+
+    /* opacity: 0;
+    visibility: hidden; */
+}
+
+.right-side-img{
+    width: 50%;
+}
+
+
+.left-side-texts{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    gap: 30px;
+
+    color: var(--color-dark-slate-grey);
+}
+
+.left-side-texts h1{
+    font-size: 3.8rem;
+}
+
+.left-side-texts p{
+    font-size: 1.1rem;
+    line-height: 25px;
+}
+.left-side-texts .imgs-sucess{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-side-texts figure{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form label{
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.form label span{
+    color: var(--color-tomato);
+}
+
+.form input{
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #00000020;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: var(--color-grey);
+}
+
+.form input:hover, .form input:focus{
+    border: 1.5px solid #000000;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+
+.errorEmail:invalid{
+    background-color: #ff000020;
+    border-color:var(--color-tomato);
+    color: var(--color-tomato);
+}
+
+
+.form button{
+    width: 100%;
+    background-color: var(--color-dark-slate-grey);
+    padding: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    color: var(--color-white);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+.form button:hover{
+    cursor: pointer;
+    background: linear-gradient(137deg, rgb( 255, 84, 120) 20%, rgb(255, 98, 87) 70%);
+    box-shadow: 0px 5px 15px var(--color-grey);
+    transition: all 0.3s ease;
+}
+
+
+.container-thanks{
+    width: 500px;
+    background-color: white;
+    padding: 60px;
+    border-radius: 25px;
+    color: var(--color-dark-slate-grey);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 35px;
+}
+
+.container-thanks h1{
+    font-size: 3rem;
+}
+
+.container-thanks p{
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.container-thanks p span{
+    font-weight: 900;
+}
+
+.container-thanks button{
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: var(--color-dark-slate-grey);
+
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.container-thanks button:hover{
+    cursor: pointer;
+    background: linear-gradient(137deg, rgb( 255, 84, 120) 20%, rgb(255, 98, 87) 70%);
+    box-shadow: 0px 5px 15px var(--color-grey);
+    transition: all 0.3s ease;
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    .container-subscribe{
+        width: 100%;
+        border-radius: 0px;
+        padding: 0;
+        min-height: 100vh;
+
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+    }
+
+    .right-side-img{
+        width: 100%;
+    }
+
+    .right-side-img img{
+        width: 100%;
+    }
+
+    .left-side-texts{
+        width: 100%;
+        padding: 40px 25px;
+    }
+
+    .left-side-texts h1{
+        font-size: 3rem;
+    }
+
+    .left-side-texts p{
+        font-size: 1.2rem;
+    }
+
+    .container-thanks{
+        width: 100%;
+        border-radius: 0px;
+        padding: 30px;
+        min-height: 100vh;
+    }
+
+    .container-thanks p{
+        flex: 1;
+    }
+
+    .container-thanks figure{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .left-side-texts h1{
+        font-size: 2.5rem;
+    }
+
+    .left-side-texts p{
+        font-size: 1rem;
+    }
+
+}
+
+
